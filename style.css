@@ -1,0 +1,168 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+    color:white;
+    min-height:100vh;
+    animation:bgMove 10s infinite alternate;
+}
+
+/* Background Animation */
+@keyframes bgMove{
+    from{
+        background-position:left;
+    }
+    to{
+        background-position:right;
+    }
+}
+
+header{
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(12px);
+    padding:20px;
+    position:sticky;
+    top:0;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#00f5ff;
+    transform:translateY(-3px);
+}
+
+.container{
+    width:90%;
+    max-width:1000px;
+    margin:40px auto;
+}
+
+/* Card Animation */
+.card{
+    background:rgba(255,255,255,0.12);
+    padding:30px;
+    border-radius:18px;
+    margin:25px 0;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+    animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+h1,h2{
+    margin-bottom:15px;
+    animation:slideLeft 1s ease;
+}
+
+@keyframes slideLeft{
+    from{
+        opacity:0;
+        transform:translateX(-80px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+p{
+    margin:15px 0;
+    line-height:1.8;
+}
+
+input{
+    width:75%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    outline:none;
+}
+
+button{
+    padding:12px 22px;
+    border:none;
+    border-radius:10px;
+    background:#00d4ff;
+    color:white;
+    cursor:pointer;
+    transition:.4s;
+}
+
+button:hover{
+    transform:scale(1.08);
+    background:#0099ff;
+}
+
+ul li{
+    margin:12px 0;
+    transition:.3s;
+}
+
+ul li:hover{
+    transform:translateX(12px);
+    color:#00f5ff;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+    background:rgba(255,255,255,0.08);
+}
+
+/* Floating Animation */
+.chat-box{
+    animation:float 3s infinite ease-in-out;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+/* Fade Animation */
+.fade{
+    animation:fade 1.5s;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
